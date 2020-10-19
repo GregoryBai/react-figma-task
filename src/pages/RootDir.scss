@@ -1,0 +1,34 @@
+@import "../styles/base.scss";
+.RootDir {
+  &--container {
+    display: flex;
+    max-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#000, #00000001, #000),
+      url("../media/Pattern@2x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.RootDir__header {
+  text-align: center;
+  padding-top: 36px;
+  font-family: "ExoThin";
+  font-weight: 100;
+  color: #fff;
+  font-size: $font-size-xl;
+  text-shadow: 0 1px 1px #fff;
+}
+
+.container {
+  flex-basis: 1280px;
+  flex-shrink: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

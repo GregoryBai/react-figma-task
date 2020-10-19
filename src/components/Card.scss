@@ -1,0 +1,163 @@
+@import "../styles/base.scss";
+
+// ? Надо ли делать letter-spacing 0.3px, чтобы было прям pixel-perfect?
+// ? Я совсем не знал, как правильно делать угол...
+.card__container {
+  margin: 25px 40px;
+  font-family: "TrebuchetMS";
+  position: relative;
+}
+
+.bottom__text {
+  font-size: 12px;
+  word-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.text__link {
+  transition: all 100ms ease-in;
+  color: #1698d9;
+  text-decoration: none;
+  border-bottom: 2px dashed;
+}
+
+.text__period {
+  color: #1698d9;
+}
+.card__outerCorner {
+  clip-path: polygon(0 0, 100% 0, 52% 52%, 0 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: $card-border-radius;
+  border-left: $card-border-width solid $card-default;
+  border-top: $card-border-width solid $card-default;
+  width: 20px;
+  height: 20px;
+}
+.card__innerCorner {
+  top: -16px;
+  left: $card-border-width;
+  transform: rotate(-135deg);
+  position: absolute;
+  width: $card-border-width;
+  height: 60px;
+  background-color: $card-default;
+}
+.card {
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%, 0 6%);
+  transition: all 100ms ease-in;
+  width: 320px;
+  height: 480px;
+  background-image: url("../media/Card_catPhoto.png");
+  background-color: $card-background;
+  background-repeat: no-repeat;
+  background-position: 50% 106%;
+  position: relative;
+  padding: 16px 0px 20px 46px;
+  box-shadow: 0px 4px 4px #000;
+  border-radius: $card-border-radius;
+  border: $card-border-width solid $card-default;
+
+  &:hover {
+    border: $card-border-width solid $card-default-hover;
+
+    .card__outerCorner {
+      border-left: $card-border-width solid $card-default-hover;
+      border-top: $card-border-width solid $card-default-hover;
+    }
+    .card__innerCorner {
+      background-color: $card-default-hover;
+    }
+    .card__portion {
+      background-color: $card-default-hover;
+    }
+    .text__link {
+      color: $card-default-hover;
+    }
+  }
+  &--selected {
+    border: $card-border-width solid $card-selected;
+
+    .card__outerCorner {
+      border-left: $card-border-width solid $card-selected;
+      border-top: $card-border-width solid $card-selected;
+    }
+    .card__innerCorner {
+      background-color: $card-selected;
+    }
+    .card__portion {
+      background-color: $card-selected;
+    }
+    .text__link {
+      color: $card-selected;
+    }
+    &:hover {
+      border: $card-border-width solid $card-selected-hover;
+
+      .card__outerCorner {
+        border-left: $card-border-width solid $card-selected-hover;
+        border-top: $card-border-width solid $card-selected-hover;
+      }
+      .card__innerCorner {
+        background-color: $card-selected-hover;
+      }
+      .card__portion {
+        background-color: $card-selected-hover;
+      }
+      .text__link {
+        color: $card-selected-hover;
+      }
+    }
+  }
+  &--disabled {
+    border: $card-border-width solid $card-border-disabled;
+  }
+}
+
+.card__slogan {
+  font-size: $font-size-m;
+  color: $font-color-primary;
+}
+
+.card__title {
+  letter-spacing: 2px;
+  font-size: $font-size-xxl;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.card__flavor {
+  letter-spacing: 1px;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+.card__bodyText {
+  margin-top: 16px;
+  font-size: $font-size-sm;
+  color: $font-color-primary;
+}
+
+.card__portion {
+  transition: all 100ms ease-in;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #1698d9;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.portion__weight {
+  margin: 10px 0px 0px 3px;
+  font-size: 42px;
+}
+
+.portion__unit {
+  font-size: $font-size-m;
+  margin: -2px 0px 0px 0px;
+}
