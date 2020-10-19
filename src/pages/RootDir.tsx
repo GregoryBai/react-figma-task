@@ -5,12 +5,11 @@ import CardData from "../API_DATA/CardData"
 import { CardType } from "../types/types"
 import Loader from "../components/Loader"
 
-
 const RootDir: React.FC = () => {
   const [data, setData] = useState<CardType[]>([])
 
   useEffect(() => {
-      // * API-call imitation
+    // * API-call imitation
     setTimeout(
       () =>
         setData(
@@ -38,7 +37,6 @@ const RootDir: React.FC = () => {
             card.cardClass = "card--default"
           }
         }
-
         return card
       })
     )
@@ -48,13 +46,6 @@ const RootDir: React.FC = () => {
     <main className="RootDir RootDir--container">
       <h2 className="RootDir__header">Ты сегодня покормил кота?</h2>
       <div className="container">
-        {/* {data.map((card) => (
-          <Card
-            handleSelect={handleSelect}
-            data={card}
-            key={card.id + card.flavor}
-          />
-        ))} */}
         {data.length ? (
           data.map((card) => (
             <Card
@@ -65,9 +56,10 @@ const RootDir: React.FC = () => {
           ))
         ) : (
           <Loader />
-        )}}
+        )}
       </div>
     </main>
   )
 }
+
 export default RootDir
