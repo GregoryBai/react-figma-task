@@ -11,6 +11,8 @@ export default [
     miceSizeText: "мышь в подарок",
     portionWeight: "0,5",
     portionUnit: "КГ",
+    bottomTextSelected: "Печень утки разварная с артишоками.",
+    bottomTextDisabled: "Печалька, с фуа-гра закончился",
   },
   {
     title: "Нямушка",
@@ -22,6 +24,8 @@ export default [
     miceSizeText: "мыши в подарок",
     portionWeight: "2",
     portionUnit: "КГ",
+    bottomTextSelected: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    bottomTextDisabled: "Печалька, с рыбой закончился.",
   },
   {
     title: "Нямушка",
@@ -33,5 +37,7 @@ export default [
     miceSizeText: "мышей в подарок заказчик доволен",
     portionWeight: "5",
     portionUnit: "КГ",
+    bottomTextSelected: "Филе из цыплят с трюфелями в бульоне.",
+    bottomTextDisabled: "Печалька, с курой закончился.",
   },
 ]

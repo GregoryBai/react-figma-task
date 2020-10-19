@@ -8,4 +8,9 @@ export type CardType = {
   miceSizeText: string
   portionWeight: string
   portionUnit: string
+  bottomTextSelected: string
+  bottomTextDisabled: string
+
+  id?: number
+  cardClass?: string
 }

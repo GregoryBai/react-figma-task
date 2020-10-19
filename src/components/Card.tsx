@@ -4,26 +4,36 @@ import { CardType } from "../types/types"
 
 interface Props {
   data: CardType
+  handleSelect(id: number | undefined, mode: "select" | "deselect"): void
 }
 
 const Card: React.FC<Props> = (props) => {
-  const {
-    title,
-    slogan,
-    flavor,
-    portionSize,
-    portionSizeText,
-    miceSize,
-    miceSizeText,
-    portionWeight,
-    portionUnit,
-  } = props.data
+  let {
+    data: {
+      title,
+      slogan,
+      flavor,
+      portionSize,
+      portionSizeText,
+      miceSize,
+      miceSizeText,
+      portionWeight,
+      portionUnit,
+      cardClass,
+      bottomTextDisabled,
+      bottomTextSelected,
+      id,
+    },
+    handleSelect,
+  } = props
 
   return (
     <div className="card__container">
-      <div className="card__outerCorner" />
-      <div className="card card--selected">
-        <div className="card__innerCorner" />
+      <div
+        onClick={() => handleSelect(id, "select")}
+        onDoubleClick={() => handleSelect(id, "deselect")}
+        className={`card ${cardClass}`}
+      >
         <p className="card__slogan">{slogan}</p>
         <h3 className="card__title">{title}</h3>
         <p className="card__flavor">{flavor}</p>
@@ -32,7 +42,7 @@ const Card: React.FC<Props> = (props) => {
           &nbsp;
           <span className="bodyText__portionSizeText">{portionSizeText}</span>
           &nbsp;
-          <span className="bodyTExt__miceSize">{miceSize || ""}</span>
+          <span className="bodyText__miceSize">{miceSize || ""}</span>
           &nbsp;
           <span className="bodyText__miceSizeText">{miceSizeText}</span>
           &nbsp;
@@ -42,13 +52,22 @@ const Card: React.FC<Props> = (props) => {
           <p className="portion__unit">{portionUnit}</p>
         </div>
       </div>
-      <p className="bottom__text">
-        Чего сидишь? Порадуй котэ,{" "}
-        <a href="#" className="text__link">
-          купи
-        </a>
-        <span className="text__period">.</span>
-      </p>
+      {cardClass === "card--default" ? (
+        <p className="bottom__text">
+          Чего сидишь? Порадуй котэ, &nbsp;
+          <span
+            onClick={() => handleSelect(id, "select")}
+            className="text__link"
+          >
+            купи
+          </span>
+          <span className="text__period">.</span>
+        </p>
+      ) : cardClass === "card--selected" ? (
+        <p className="bottom__text">{bottomTextSelected}</p>
+      ) : (
+        <p className="bottom__text">{bottomTextDisabled}</p>
+      )}
     </div>
   )
 }
