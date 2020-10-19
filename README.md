@@ -1,4 +1,5 @@
 ## Тестовое Задание
+  [online-preview](https://github.com/GregoryBai/react-figma-task/blob/gh-pages/README.md)
 
 ### Установленные пакеты и использованные технологии:
 
