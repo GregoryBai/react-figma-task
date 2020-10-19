@@ -1,5 +1,6 @@
 # react-figma-task
-I made a responsive web-page with some functionality according to the task. The original sketch I built upon was in figma.
+
+I made a responsive * [web-page](https://gregorybai.github.io/react-figma-task) with some functionality according to the task. The original sketch I built upon was in figma.
 
 ## Тестовое Задание
 
