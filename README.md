@@ -1,4 +1,5 @@
 ## Тестовое Задание
+  [online-preview](https://gregorybai.github.io/react-figma-task/)
 
 ### Установленные пакеты и использованные технологии:
 
