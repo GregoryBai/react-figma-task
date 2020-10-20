@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-figma-task/static/css/main.3b799561.chunk.css",
-    "main.js": "/react-figma-task/static/js/main.1d1f9364.chunk.js",
-    "main.js.map": "/react-figma-task/static/js/main.1d1f9364.chunk.js.map",
+    "main.css": "/react-figma-task/static/css/main.3c3b9315.chunk.css",
+    "main.js": "/react-figma-task/static/js/main.766d2ef2.chunk.js",
+    "main.js.map": "/react-figma-task/static/js/main.766d2ef2.chunk.js.map",
     "runtime-main.js": "/react-figma-task/static/js/runtime-main.35639d4f.js",
     "runtime-main.js.map": "/react-figma-task/static/js/runtime-main.35639d4f.js.map",
     "static/js/2.c55cfbbb.chunk.js": "/react-figma-task/static/js/2.c55cfbbb.chunk.js",
     "static/js/2.c55cfbbb.chunk.js.map": "/react-figma-task/static/js/2.c55cfbbb.chunk.js.map",
     "index.html": "/react-figma-task/index.html",
-    "precache-manifest.81bf208a0c84cfbfa46343d50d4107f6.js": "/react-figma-task/precache-manifest.81bf208a0c84cfbfa46343d50d4107f6.js",
+    "precache-manifest.f77b20b0c46b0250969a0f1f6fb43bd9.js": "/react-figma-task/precache-manifest.f77b20b0c46b0250969a0f1f6fb43bd9.js",
     "service-worker.js": "/react-figma-task/service-worker.js",
-    "static/css/main.3b799561.chunk.css.map": "/react-figma-task/static/css/main.3b799561.chunk.css.map",
+    "static/css/main.3c3b9315.chunk.css.map": "/react-figma-task/static/css/main.3c3b9315.chunk.css.map",
     "static/js/2.c55cfbbb.chunk.js.LICENSE.txt": "/react-figma-task/static/js/2.c55cfbbb.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/react-figma-task/static/media/TrebuchetMS.c8fb4d16.ttf",
     "static/media/RootDir.scss": "/react-figma-task/static/media/Pattern@2x.d479314e.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.35639d4f.js",
     "static/js/2.c55cfbbb.chunk.js",
-    "static/css/main.3b799561.chunk.css",
-    "static/js/main.1d1f9364.chunk.js"
+    "static/css/main.3c3b9315.chunk.css",
+    "static/js/main.766d2ef2.chunk.js"
   ]
 }

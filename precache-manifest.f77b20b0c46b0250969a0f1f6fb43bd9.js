@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b8db8f0847a93a69f82dc3124c77bd3",
+    "revision": "1c02b1a6050efde39997bef2bd3249f6",
     "url": "/react-figma-task/index.html"
   },
   {
-    "revision": "a88bc7fbecb3b744b6a9",
-    "url": "/react-figma-task/static/css/main.3b799561.chunk.css"
+    "revision": "67aaca43c6b93877c19b",
+    "url": "/react-figma-task/static/css/main.3c3b9315.chunk.css"
   },
   {
     "revision": "e99236fecb1471a5b44a",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-figma-task/static/js/2.c55cfbbb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a88bc7fbecb3b744b6a9",
-    "url": "/react-figma-task/static/js/main.1d1f9364.chunk.js"
+    "revision": "67aaca43c6b93877c19b",
+    "url": "/react-figma-task/static/js/main.766d2ef2.chunk.js"
   },
   {
     "revision": "f287a4a98b788a9ec1b4",
