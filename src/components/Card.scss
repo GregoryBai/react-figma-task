@@ -1,4 +1,4 @@
-@import "../styles/base.scss";
+@import '../styles/base.scss';
 
 // ? Надо ли делать letter-spacing 0.3px, чтобы было прям pixel-perfect?
 // ! В дизайне отсутсвует верхний левый край на карточке при selected, default, hover; Также, кот на дизайне --disabled "съезжает"
@@ -6,150 +6,149 @@
 // * возможно, стоило бы объединить card-back для --selected, --default, тк. они одинаковы
 
 .card__container {
-  margin: 25px 40px;
-  font-family: "TrebuchetMS";
-  position: relative;
+	margin: 25px 40px;
+	font-family: 'TrebuchetMS';
+	position: relative;
 }
 
 .card {
-  user-select: none;
-  border-radius: $card-border-radius;
-  width: 320px;
-  height: 480px;
-  background-size: contain;
-  position: relative;
-  padding: 18px 0px 20px 54px;
-  box-shadow: 0px 4px 4px #000;
-  transition: $card-transition;
+	user-select: none;
+	border-radius: $card-border-radius;
+	width: 320px;
+	height: 480px;
+	background-size: contain;
+	position: relative;
+	padding: 18px 0px 20px 54px;
+	box-shadow: 0px 4px 4px #000;
+	transition: $card-transition;
 
-  &--default {
-    background: no-repeat bottom url("../media/card/card-border-default.svg"),
-      no-repeat bottom url("../media/card/card-cat-photo.png"),
-      no-repeat bottom url("../media/card/card-back.svg");
-    &:hover {
-      background: no-repeat bottom
-          url("../media/card/card-border-default-hover.svg"),
-        no-repeat bottom url("../media/card/card-cat-photo.png"),
-        no-repeat bottom url("../media/card/card-back-default-hover.svg");
-      .card__portion {
-        background-color: $card-default-hover;
-      }
-      .text__link {
-        color: $card-default-hover;
-      }
-    }
-  }
-  &--selected {
-    background: no-repeat url("../media/card/card-border-selected.svg"),
-      no-repeat bottom url("../media/card/card-cat-photo.png"),
-      no-repeat bottom url("../media/card/card-back-selected.svg");
+	&--default {
+		background: no-repeat bottom url('../media/card/card-border-default.svg'),
+			no-repeat bottom url('../media/card/card-cat-photo.png'),
+			no-repeat bottom url('../media/card/card-back.svg');
+		&:hover {
+			background: no-repeat bottom
+					url('../media/card/card-border-default-hover.svg'),
+				no-repeat bottom url('../media/card/card-cat-photo.png'),
+				no-repeat bottom url('../media/card/card-back-default-hover.svg');
+			.card__portion {
+				background-color: $card-default-hover;
+			}
+			.text__link {
+				color: $card-default-hover;
+			}
+		}
+	}
+	&--selected {
+		background: no-repeat url('../media/card/card-border-selected.svg'),
+			no-repeat bottom url('../media/card/card-cat-photo.png'),
+			no-repeat bottom url('../media/card/card-back-selected.svg');
 
-    .card__portion {
-      background-color: $card-selected;
-    }
-    .text__link {
-      color: $card-selected;
-    }
-    &:hover {
-      background: no-repeat bottom no-repeat bottom
-          url("../media/card/card-border-selected-hover.svg"),
-        no-repeat bottom url("../media/card/card-cat-photo.png"),
-        no-repeat bottom url("../media/card/card-back-selected.svg");
-      .card__portion {
-        background-color: $card-selected-hover;
-      }
-      .text__link {
-        color: $card-selected-hover;
-      }
-    }
-  }
+		.card__portion {
+			background-color: $card-selected;
+		}
+		.text__link {
+			color: $card-selected;
+		}
+		&:hover {
+			background: no-repeat bottom no-repeat bottom
+					url('../media/card/card-border-selected-hover.svg'),
+				no-repeat bottom url('../media/card/card-cat-photo.png'),
+				no-repeat bottom url('../media/card/card-back-selected.svg');
+			.card__portion {
+				background-color: $card-selected-hover;
+			}
+			.text__link {
+				color: $card-selected-hover;
+			}
+		}
+	}
 
-  &--disabled {
-    color: $card-border-disabled;
-    background: no-repeat bottom url("../media/card/card-border-disabled.svg"),
-      no-repeat bottom url("../media/card/card-cat-photo-disabled.png"),
-      no-repeat bottom url("../media/card/card-back-disabled.svg");
+	&--disabled {
+		color: $card-border-disabled;
+		background: no-repeat bottom url('../media/card/card-border-disabled.svg'),
+			no-repeat bottom url('../media/card/card-cat-photo-disabled.png'),
+			no-repeat bottom url('../media/card/card-back-disabled.svg');
 
-    & + .bottom__text {
-      color: $font-color-disabled;
-    }
-    .card__bodyText {
-      color: $card-border-disabled;
-    }
-    .card__slogan {
-      color: $card-border-disabled;
-    }
-    .card__portion {
-      background-color: $card-portion-disabled;
-    }
-  }
+		& + .bottom__text {
+			color: $font-color-disabled;
+		}
+		.card__bodyText {
+			color: $card-border-disabled;
+		}
+		.card__slogan {
+			color: $card-border-disabled;
+		}
+		.card__portion {
+			background-color: $card-portion-disabled;
+		}
+	}
 }
 
 .card__slogan {
-  font-size: $font-size-m;
-  color: $font-color-primary;
+	font-size: $font-size-m;
+	color: $font-color-primary;
 }
 
 .card__title {
-  letter-spacing: 2px;
-  font-size: $font-size-xxl;
-  font-weight: bold;
-  margin-top: 5px;
+	letter-spacing: 2px;
+	font-size: $font-size-xxl;
+	font-weight: bold;
+	margin-top: 5px;
 }
 .card__flavor {
-  letter-spacing: 1px;
-  font-size: $font-size-lg;
-  font-weight: bold;
+	letter-spacing: 1px;
+	font-size: $font-size-lg;
+	font-weight: bold;
 }
 .card__bodyText {
-  margin-top: 16px;
-  font-size: $font-size-sm;
-  color: $font-color-primary;
+	margin-top: 16px;
+	font-size: $font-size-sm;
+	color: $font-color-primary;
 }
 
 .card__portion {
-  transition: $card-transition;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  background-color: $card-default;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  bottom: 20px;
-  right: 12px;
+	transition: $card-transition;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: $card-default;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	right: 12px;
 
-  .portion__weight {
-    margin: 10px 0px 0px 3px;
-    font-size: 42px;
-  }
+	.portion__weight {
+		margin: 10px 0px 0px 3px;
+		font-size: 42px;
+	}
 
-  .portion__unit {
-    font-size: $font-size-m;
-    margin: -2px 0px 0px 0px;
-  }
+	.portion__unit {
+		font-size: $font-size-m;
+		margin: -2px 0px 0px 0px;
+	}
 }
 
 .bottom__text {
-  transition: $card-transition;
-  font-size: 12px;
-  word-spacing: 1px;
-  color: #fff;
-  text-align: center;
-  margin-top: 12px;
+	transition: $card-transition;
+	font-size: 12px;
+	word-spacing: 1px;
+	color: #fff;
+	text-align: center;
+	margin-top: 12px;
 
-  .text__link {
-    transition: all 100ms ease-in;
-    color: $card-default;
-    text-decoration: none;
-    border-bottom: 2px dashed;
+	.text__link {
+		transition: all 100ms ease-in;
+		color: $card-default;
+		text-decoration: underline dashed;
 
-    &:hover {
-      color: $card-default-hover;
-    }
-  }
+		&:hover {
+			color: $card-default-hover;
+		}
+	}
 
-  .text__period {
-    color: $card-default;
-  }
+	.text__period {
+		color: $card-default;
+	}
 }
